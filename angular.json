@@ -58,6 +58,14 @@
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true
+            },
+            "qa": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.qa.ts"
+                }
+              ]
             }
           }
         },
@@ -123,6 +131,9 @@
           "configurations": {
             "production": {
               "browserTarget": "app:build:production"
+            },
+            "qa": {
+              "browserTarget": "app:build:qa"
             }
           }
         },
@@ -136,6 +147,10 @@
             "production": {
               "cordovaBuildTarget": "app:ionic-cordova-build:production",
               "devServerTarget": "app:serve:production"
+            },
+            "qa": {
+              "cordovaBuildTarget": "app:ionic-cordova-build:qa",
+              "devServerTarget": "app:serve:qa"
             }
           }
         }
